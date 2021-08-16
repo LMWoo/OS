@@ -24,11 +24,11 @@
    - 강화 학습(reinforcement learning), 가장 큰 보상을 얻기 위해 정책(policy)라고 부르는 최상의 전략을 스스로 학습 ex) 딥마인드의 알파고
 
 7. 고객들을 여러 그룹으로 분류하기 위한 방법은?
-   - supervised learning의 classification(training set에 label이 있을 경우)
-   - unsupervised learning의 clustering(training set에 label이 없을 경우)
+   - 지도 학습의 분류(training set에 label이 있을 경우)
+   - 비지도 학습의 군집(training set에 label이 없을 경우)
 
 8. 스팸 감지의 문제의 해결 방법
-   - supervised learning의 classification ex) 스팸이면 1, 아니면 0으로 label을 준다
+   - 지도 학습의 분류 ex) 스팸이면 1, 아니면 0으로 label을 준다
 
 9. 온라인 학습(online learning)이란?
    - 모델을 런칭 후에도 데이터를 실시간으로 미니배치(mini-batch)라 부르는 작은 묶음 단위로 주입하여 훈련시킨다
@@ -37,13 +37,21 @@
 10. 외부 메모리 학습(out-of-core learning)이란?
    - 메인 메모리의 용량이 부족할 경우 온라인 학습 방식으로 학습한다.
 
+11. 유사도 측정에 의존하는 학습 알고리즘 방법은?
+   - 사례 기반 학습(instance-based learning), 새로운 훈련 데이터를 기억하며 학습하며 기존 학습한 데이터와 유사도를 측정하여 가장 유사한 클래스로 분류된다.
 
+12. 모델 파라미터(model parameter)와 하이퍼파라미터(hyperparameter)의 차이
+   - 모델 파라미터 : 모델이 학습하면서 최적의 값을 찾는 파라미터
+   - 하이퍼파라미터 : 학습 전에 미리 지정되고 학습 중에는 고정된 상수 값을 가지는 파라미터 ex) learning rate
 
-14. What type of learning algorithm relies on a similarity measure to make predic‐ tions?
-15. What is the difference between a model parameter and a learning algorithm’s hyperparameter?
-16. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
-17. Can you name four of the main challenges in Machine Learning?
-18. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
+13. 모델 기반 알고리즘 목표, 일반적인 학습 전략
+   - 목표 : 새로운 데이터에 잘 일반화되기 위한 모델 파라미터의 최적의 값을 찾는다.
+   - 전략 : 훈련 데이터를 훈련 세트와 테스트 세트로 나누는 것, 훈련 세트로 훈련된 모델에 새로운 샘플(테스트 세트)에서 평가하여 모델의 적합도를 측정한다. 
+
+14. 머신러닝의 주요 과제
+   - 충분하지 않은 훈련 데이터, 대표성 없는 훈련 데이터(표본 추출이 잘못된 것), 낮은 품질의 데이터, 관련 없는 특성, 훈련 데이터 과대적합(overfitting), 훈련 데이터 과소적합(underfitting) 등
+
+15. 모델이 훈련 데이터에서 성능이 좋지만 새로운 샘플에서
 19. What is a test set and why would you want to use it?
 20. What is the purpose of a validation set?
 21. What can go wrong if you tune hyperparameters using the test set?
