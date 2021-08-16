@@ -2,7 +2,7 @@
 
 ### PART 1 머신러닝
 
-[    ###CHAPTER 1 한눈에 보는 머신러닝](MachineLearning/PART1/CHAPTER1.md)
+[    CHAPTER 1 한눈에 보는 머신러닝](MachineLearning/PART1/CHAPTER1.md)
 
 ### CHAPTER 2 머신러닝 프로젝트 처음부터 끝까지
 
