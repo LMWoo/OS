@@ -10,28 +10,34 @@
 3. 레이블된 훈련 세트란?
  - 각 훈련 데이터에 정답이 있는 훈련 세트(training set)에 정답(label)이 포함된 세트 
 
-4. 자주 쓰이는 지도 학습 방식의 2가지 유형
- - 분류
- - 회귀
+4. 자주 쓰이는 지도 학습(supervised learning)의 2가지 유형
+ - 분류(classification)
+ - 회귀(regression)
 
-5. 자주 쓰이는 지도 학습 방식의 4가지 유형
+5. 자주 쓰이는 비지도 학습(unsupervised learning)의 4가지 유형
  - 군집(clustering)
  - 시각화(visualization)
  - 차원 축소(dimensionality reduction)
  - 연관 규칙 학습(association rule learning)
 
 6. 사전 정보가 없는 여러 지형에서 로봇을 걸어가게 하려면 어떤 유형의 알고리즘을 사용해야 하는가?
- - 
-8. What type of algorithm would you use to segment your customers into multiple groups?
-9. Would you frame the problem of spam detection as a supervised learning prob‐ lem or an unsupervised learning problem?
-10. What is an online learning system?
-11. What is out-of-core learning?
-12. What type of learning algorithm relies on a similarity measure to make predic‐ tions?
-13. What is the difference between a model parameter and a learning algorithm’s hyperparameter?
-14. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
-15. Can you name four of the main challenges in Machine Learning?
-16. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
-17. What is a test set and why would you want to use it?
-18. What is the purpose of a validation set?
-19. What can go wrong if you tune hyperparameters using the test set?
-20. What is repeated cross-validation and why would you prefer it to using a single validation set?
+ - 강화 학습(reinforcement learning), 가장 큰 보상을 얻기 위해 정책(policy)라고 부르는 최상의 전략을 스스로 학습 ex) 딥마인드의 알파고
+
+8. 고객들을 여러 그룹으로 분류하기 위한 방법은?
+ - supervised learning의 classification(training set에 label이 있을 경우)
+ - unsupervised learning의 clustering(training set에 label이 없을 경우)
+
+9. 스팸 감지의 문제의 해결 방법
+ - supervised learning의 classification ex) 스팸이면 1, 아니면 0으로 label을 준다
+
+11. What is an online learning system?
+12. What is out-of-core learning?
+13. What type of learning algorithm relies on a similarity measure to make predic‐ tions?
+14. What is the difference between a model parameter and a learning algorithm’s hyperparameter?
+15. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
+16. Can you name four of the main challenges in Machine Learning?
+17. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
+18. What is a test set and why would you want to use it?
+19. What is the purpose of a validation set?
+20. What can go wrong if you tune hyperparameters using the test set?
+21. What is repeated cross-validation and why would you prefer it to using a single validation set?
