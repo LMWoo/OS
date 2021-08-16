@@ -1,6 +1,6 @@
-# DeepLearning
+# MachineLearning
 
-# 1.머신러닝
+## 1.1 머신러닝
 
 [1.1 한눈에 보는 머신러닝](MachineLearning/PART1/CHAPTER1.md)
 
