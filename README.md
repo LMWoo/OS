@@ -1,3 +1,11 @@
+# DeepLearning
+
+|목차|정리|
+|----|----|
+|||
+
+## References
+
 # OS
 
 |목차|정리|
@@ -14,10 +22,4 @@
 
 ## References
 
-# DeepLearning
 
-|목차|정리|
-|----|----|
-|||
-
-## References
