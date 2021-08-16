@@ -30,14 +30,18 @@
 9. 스팸 감지의 문제의 해결 방법
  - supervised learning의 classification ex) 스팸이면 1, 아니면 0으로 label을 준다
 
-11. What is an online learning system?
-12. What is out-of-core learning?
-13. What type of learning algorithm relies on a similarity measure to make predic‐ tions?
-14. What is the difference between a model parameter and a learning algorithm’s hyperparameter?
-15. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
-16. Can you name four of the main challenges in Machine Learning?
-17. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
-18. What is a test set and why would you want to use it?
-19. What is the purpose of a validation set?
-20. What can go wrong if you tune hyperparameters using the test set?
-21. What is repeated cross-validation and why would you prefer it to using a single validation set?
+10. 온라인 학습(online learning)이란?
+ - 모델을 런칭 이 후에도 데이터를 실시간으로 미니배치(mini-batch)라 부르는 작은 묶음 단위로 주입하여 훈련시킨다
+ - 변화하는 데이터를 학습 시키므로 필요없는 데이터를 버려 데이터 공간을 확보한다.
+
+11. 외부 메모리 학습(out-of-core learning)이란?
+ - 
+14. What type of learning algorithm relies on a similarity measure to make predic‐ tions?
+15. What is the difference between a model parameter and a learning algorithm’s hyperparameter?
+16. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
+17. Can you name four of the main challenges in Machine Learning?
+18. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
+19. What is a test set and why would you want to use it?
+20. What is the purpose of a validation set?
+21. What can go wrong if you tune hyperparameters using the test set?
+22. What is repeated cross-validation and why would you prefer it to using a single validation set?
