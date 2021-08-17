@@ -52,8 +52,14 @@
    - 충분하지 않은 훈련 데이터, 대표성 없는 훈련 데이터(표본 추출이 잘못된 것), 낮은 품질의 데이터, 관련 없는 특성, 훈련 데이터 과대적합(overfitting), 훈련 데이터 과소적합(underfitting) 등
 
 15. 모델이 훈련 데이터에서 성능이 좋지만 새로운 샘플에서 일반화 성능이 나쁘면 어떤 문제를 해결해야 하는가?
-    - 
-19. What is a test set and why would you want to use it?
-20. What is the purpose of a validation set?
-21. What can go wrong if you tune hyperparameters using the test set?
-22. What is repeated cross-validation and why would you prefer it to using a single validation set?
+   - 파라미터를 줄여 모델을 단순화 시킨다.
+   - 훈련 데이터를 더 많이 모은다.
+   - 훈련 데이터의 잡음을 줄인다.
+
+16. 테스트 세트란?
+   - 
+20. 검증 세트란?
+   - 
+22. 훈련-개발 세트란?
+   - 
+24. 테스트 세트를 사용해 하이퍼파라미터를 튜닝하면 어떤 문제가 발생하는가?
