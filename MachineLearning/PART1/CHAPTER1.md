@@ -51,7 +51,7 @@
 14. 머신러닝의 주요 과제
    - 충분하지 않은 훈련 데이터, 대표성 없는 훈련 데이터(표본 추출이 잘못된 것), 낮은 품질의 데이터, 관련 없는 특성, 훈련 데이터 과대적합(overfitting), 훈련 데이터 과소적합(underfitting) 등
 
-15. 모델이 훈련 데이터에서 성능이 좋지만 새로운 샘플에서
+15. 모델이 훈련 데이터에서 성능이 좋지만 새로운 샘플에서  
 19. What is a test set and why would you want to use it?
 20. What is the purpose of a validation set?
 21. What can go wrong if you tune hyperparameters using the test set?
