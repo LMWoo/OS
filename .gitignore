@@ -32,6 +32,7 @@ DerivedData/
 
 ### Xcode Patch ###
 *.xcodeproj/*
+DFS/*
 # End of https://www.toptal.com/developers/gitignore/api/xcode
 
 .DS_Store
