@@ -1,3 +1,5 @@
+// https://www.acmicpc.net/problem/16395
+
 #include <stdio.h>
 
 int n, k;
