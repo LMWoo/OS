@@ -36,8 +36,7 @@ DerivedData/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-*.xcodeproj/
-DerivedData/
+Algorithm.xcodeproj
 # End of https://www.toptal.com/developers/gitignore/api/xcode
 
 .DS_Store
