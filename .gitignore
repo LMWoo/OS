@@ -31,13 +31,13 @@ DerivedData/
 /*.gcno
 
 ### Xcode Patch ###
-.xcodeproj
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-
+*.xcodeproj/
+DerivedData/
 # End of https://www.toptal.com/developers/gitignore/api/xcode
 
 .DS_Store
