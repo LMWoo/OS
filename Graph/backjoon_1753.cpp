@@ -8,14 +8,12 @@
 
 using namespace std;
 
-struct Edge {
-    int u;
+struct Edge{
     int v;
     int w;
     
-    Edge(int u, int v, int w)
+    Edge(int v, int w)
     {
-        this->u = u;
         this->v = v;
         this->w = w;
     }
@@ -26,49 +24,47 @@ struct Edge {
     }
 };
 
+int V, E;
 vector<pair<int, int>> map[20001];
 priority_queue<Edge> pq;
 int dist[20001];
-
-int V, E;
-int start;
+int u, v, w;
+int K;
 
 int main()
 {
     scanf("%d %d", &V, &E);
-    scanf("%d", &start);
+    scanf("%d", &K);
     for (int i = 1; i <= E; ++i)
     {
-        int u, v, w;
         scanf("%d %d %d", &u, &v, &w);
         map[u].push_back(make_pair(v, w));
     }
+    
     for (int i = 1; i <= V; ++i)
     {
         dist[i] = INT_MAX;
     }
     
-    dist[start] = 0;
-    pq.push(Edge(0, start, 0));
+    dist[K] = 0;
+    pq.push(Edge(K, 0));
     
     while(!pq.empty())
     {
         Edge top = pq.top();
         pq.pop();
-        
         int v = top.v;
         int w = top.w;
         
-        
         for (int i = 0; i < map[v].size(); ++i)
         {
-            int next_v = map[v][i].first;
-            int next_w = map[v][i].second + w;
+            int vv = map[v][i].first;
+            int ww = map[v][i].second + w;
             
-            if (next_w < dist[next_v])
+            if (ww < dist[vv])
             {
-                dist[next_v] = next_w;
-                pq.push(Edge(v, next_v, dist[next_v]));
+                dist[vv] = ww;
+                pq.push(Edge(vv, dist[vv]));
             }
         }
     }
@@ -84,5 +80,6 @@ int main()
             printf("%d\n", dist[i]);
         }
     }
+    
+    return 0;
 }
-
