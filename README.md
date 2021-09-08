@@ -3,7 +3,9 @@
 ## Sources
 
 ### BFS
+[백준 2178 - 미로탐색](/BFS/backjoon_2178.cpp) \
 [백준 7576 - 토마토](/BFS/backjoon_7576.cpp)
+
 
 ### Graph
 [백준 1197 - 최소 스패닝 트리](/Graph/backjoon_1197.cpp) \
