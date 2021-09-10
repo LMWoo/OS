@@ -20,6 +20,7 @@
 
 ## Solution
 [Graph](/Solution/Graph.pdf) \
+[DP](/Solution/DP.pdf) \
 [Math](/Solution/Math.pdf)
 
 
