@@ -10,9 +10,13 @@
 [백준 7576 - 토마토](/BFS/backjoon_7576.cpp) \
 [백준 11675 - 타임 머신](/Graph/backjoon_11657.cpp)
 
+### DP
+[백준 16395 - 파스칼의 삼각형](/DP/backjoon_16395.cpp) \
+[백준 1094 - 01타일](/DP/backjoon_1904.cpp)
+
 ### Math
 
-[백준 16395 - 파스칼의 삼각형](/Math/backjoon_16395.cpp)
+[백준 1929 - 소수 구하기](/Math/backjoon_1929.cpp)
 
 ## Solution
 [Graph](/Solution/Graph.pdf) \
