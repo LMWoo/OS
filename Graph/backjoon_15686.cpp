@@ -8,36 +8,33 @@
 
 using namespace std;
 
-int N, M;
-int arr[14];
-int input[51][51];
-int out = INT_MAX;
-
 vector<pair<int, int>> H;
 vector<pair<int, int>> C;
+
+int N, M;
+int arr[14];
+int in[51][51];
+int out = INT_MAX;
 
 void DFS(int s, int L)
 {
     if (L == M)
     {
-        int i, j;
-        int sum = 0;
-        
-        for (i = 0; i < H.size(); ++i)
+        int sum_dist = 0;
+        for (int i = 0; i < H.size(); ++i)
         {
             int min_dist = INT_MAX;
-            for (j = 0; j < L; ++j)
+            for (int j = 0; j < L; ++j)
             {
-                pair<int, int> H_point = H[i];
-                pair<int, int> C_point = C[arr[j]];
-                int dist = abs(H_point.first - C_point.first) +
-                    abs(H_point.second - C_point.second);
+                pair<int, int> H_P = H[i];
+                pair<int, int> C_P = C[arr[j]];
+                
+                int dist = abs(H_P.first - C_P.first) + abs(H_P.second - C_P.second);
                 min_dist = min(min_dist, dist);
             }
-            sum += min_dist;
+            sum_dist += min_dist;
         }
-        out = min(out, sum);
-        
+        out = min(out, sum_dist);
         return;
     }
     else
@@ -58,20 +55,20 @@ int main()
     {
         for (int j = 0; j < N; ++j)
         {
-            scanf("%d", &input[i][j]);
-            if (input[i][j] == 1)
+            scanf("%d", &in[i][j]);
+            if (in[i][j] == 1)
             {
                 H.push_back(make_pair(i, j));
             }
-            else if (input[i][j] == 2)
+            else if (in[i][j] == 2)
             {
                 C.push_back(make_pair(i, j));
             }
         }
     }
-
     
     DFS(0, 0);
     printf("%d", out);
+    
     return 0;
 }
