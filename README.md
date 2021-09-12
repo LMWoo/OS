@@ -11,7 +11,7 @@
 [백준 11675 - 타임 머신](/Graph/backjoon_11657.cpp)
 
 ### DP
-[백준 2655 - 가장 높은 탑 ](/DP/backjoon_2655.cpp) \
+[백준 2655 - 가장 높은 탑 쌓기 ](/DP/backjoon_2655.cpp) \
 [백준 11053 - 가장 긴 증가하는 수열](/DP/backjoon_11053.cpp) \
 [백준 16395 - 파스칼의 삼각형](/DP/backjoon_16395.cpp) \
 [백준 1094 - 01타일](/DP/backjoon_1904.cpp)
