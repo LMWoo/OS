@@ -27,23 +27,25 @@ struct Brick
     }
 };
 
-struct DP{
-    int W;
-    int H;
+struct DP
+{
+    int maxH;
     int prev;
     int pos;
+    int num;
     
-    DP(int W, int H, int pos)
+    DP(int maxH, int pos, int num)
     {
-        this->W = W;
-        this->H = H;
+        this->maxH = maxH;
         this->prev = -1;
         this->pos = pos;
+        this->num = num;
     }
 };
 
 vector<Brick> vec(101, Brick(0, 0, 0, 0));
 vector<DP> dp(101, DP(0, 0, 0));
+
 
 int N;
 int S, H, W;
@@ -57,48 +59,47 @@ int main()
         Brick temp(S, H, W, i);
         vec[i] = temp;
     }
-
+    
     sort(vec.begin(), vec.end());
     
-    dp[0].W = vec[0].H;
-    dp[0].H = 1;
     dp[0].pos = vec[0].pos;
+    dp[0].maxH = vec[0].H;
+    dp[0].num = 1;
     
     DP max_dp = dp[0];
     
-    for (int i = 1; i < vec.size(); ++i)
+    for (int i = 1; i < N; ++i)
     {
-        Brick curr = vec[i];
-        dp[i].W = curr.H;
-        dp[i].H = 1;
-        dp[i].pos = curr.pos;
+        Brick B_curr = vec[i];
+        dp[i].pos = B_curr.pos;
+        dp[i].maxH = B_curr.H;
+        dp[i].num = 1;
         
         for (int j = 0; j < i; ++j)
         {
-            Brick temp = vec[j];
+            Brick B_prev = vec[j];
             
-            if (curr.W < temp.W)
+            if (B_curr.W < B_prev.W)
             {
-                if (dp[i].W < dp[j].W + curr.H)
+                if (dp[i].maxH < dp[j].maxH + B_curr.H)
                 {
-                    dp[i].W = dp[j].W + curr.H;
-                    dp[i].H = dp[j].H + 1;
+                    dp[i].maxH = dp[j].maxH + B_curr.H;
                     dp[i].prev = j;
+                    dp[i].num = dp[j].num + 1;
                 }
             }
         }
-        
-        if (max_dp.W < dp[i].W)
+        if (max_dp.maxH < dp[i].maxH)
         {
             max_dp = dp[i];
         }
     }
-
-    printf("%d\n",max_dp.H);
+    
+    printf("%d\n", max_dp.num);
     while(true)
     {
         printf("%d\n", max_dp.pos + 1);
-
+        
         if (max_dp.prev == -1)
         {
             break;
