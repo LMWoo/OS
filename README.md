@@ -10,7 +10,7 @@
 [백준 1753 - 최단 경로](/Graph/backjoon_1753.cpp) \
 [백준 2178 - 미로탐색](/BFS/backjoon_2178.cpp) \
 [백준 7576 - 토마토](/BFS/backjoon_7576.cpp) \
-[백준 11675 - 타임 머신](/Graph/backjoon_11657.cpp)
+[백준 11657 - 타임 머신](/Graph/backjoon_11657.cpp)
 
 ### DP
 [백준 12865 - 평범한 배낭 ](/DP/backjoon_2655.cpp) \
