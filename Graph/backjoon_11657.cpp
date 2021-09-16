@@ -8,32 +8,33 @@
 
 using namespace std;
 
-struct Edge
-{
-    int s;
-    int e;
-    int w;
-    Edge(int s, int e, int w)
+struct Edge{
+    int A;
+    int B;
+    int C;
+    
+    Edge(int A, int B, int C)
     {
-        this->s = s;
-        this->e = e;
-        this->w = w;
+        this->A = A;
+        this->B = B;
+        this->C = C;
     }
 };
 
-vector<Edge> vec;
+vector<pair<int, int>> map[501];
 long long dist[501];
+
+int N, M;
 int A, B, C;
 
 int main()
 {
-    int N, M;
     scanf("%d %d", &N, &M);
     
     for (int i = 1; i <= M; ++i)
     {
         scanf("%d %d %d", &A, &B, &C);
-        vec.push_back(Edge(A, B, C));
+        map[A].push_back(make_pair(B, C));
     }
     
     for (int i = 1; i <= N; ++i)
@@ -45,36 +46,37 @@ int main()
     
     for (int i = 1; i <= M; ++i)
     {
-        for (int j = 0; j < vec.size(); ++j)
+        for (int j = 1; j <= N; ++j)
         {
-            int s = vec[j].s;
-            int e = vec[j].e;
-            int w = vec[j].w;
-            
-            if (dist[s] != INT_MAX && dist[e] > dist[s] + w)
+            if (dist[j] != INT_MAX)
             {
-                if (i == M)
+                for (int k = 0; k < map[j].size(); ++k)
                 {
-                    printf("%d", -1);
-                    return 0;
+                    int v = map[j][k].first;
+                    int w = map[j][k].second;
+                    
+                    if (dist[v] > dist[j] + w)
+                    {
+                        if (i == M)
+                        {
+                            printf("%d", -1);
+                            return 0;
+                        }
+                        dist[v] = dist[j] + w;
+                    }
                 }
-                dist[e] = dist[s] + w;
             }
         }
     }
-    
     
     for (int i = 2; i <= N; ++i)
     {
         if (dist[i] == INT_MAX)
         {
             printf("%d\n", -1);
+            continue;
         }
-        else
-        {
-            printf("%lld\n", dist[i]);
-        }
+        printf("%lld\n", dist[i]);
     }
-    
     return 0;
 }
