@@ -421,4 +421,9 @@ FodyWeavers.xsd
 *.sln
 Algorithm/
 
+### Mac Xcode Patch ###
+.DS_Store
+Algorithm.xcodeproj/
+Solution/.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,xcode
